@@ -1,7 +1,62 @@
 [
     {
         "id": 1,
-        "image": "./images/",
+        "image": "./images/apu.png",
+        "click-property": false
+    },
+    {
+        "id": 2,
+        "image": "./images/aunt.png",
+        "click-property": false
+    },
+    {
+        "id": 3,
+        "image": "./images/bart.png",
+        "click-property": false
+    },
+    {
+        "id": 4,
+        "image": "./images/burns.png",
+        "click-property": false
+    },
+    {
+        "id": 5,
+        "image": "./images/flanders.png",
+        "click-property": false
+    },
+    {
+        "id": 6,
+        "image": "./images/homer.png",
+        "click-property": false
+    },
+    {
+        "id": 7,
+        "image": "./images/krusty.png",
+        "click-property": false
+    },
+    {
+        "id": 8,
+        "image": "./images/lisa.png",
+        "click-property": false
+    },
+    {
+        "id": 9,
+        "image": "./images/maggie.png",
+        "click-property": false
+    },
+    {
+        "id": 10,
+        "image": "./images/marge.png",
+        "click-property": false
+    },
+    {
+        "id": 11,
+        "image": "./images/milhouse.png",
+        "click-property": false
+    },
+    {
+        "id": 12,
+        "image": "./images/moe.png",
         "click-property": false
     }
 ]
