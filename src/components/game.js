@@ -1,5 +1,4 @@
 import Data from "../data.json"
-// have this data in the state function
 import React, { Component } from "react"
 
 // import Navbar from "./navbar"
@@ -13,13 +12,13 @@ class Game extends Component {
         topScore: 0,
         score: 0,
         message: "",
-        shakeit: "false"
+        shuffle: "false"
     };
     componentDidMount() {
         console.log('GrandChild did mount.');
     }
 
-
+    
 
     render() {
         return (

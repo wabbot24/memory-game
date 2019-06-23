@@ -2,61 +2,73 @@
     {
         "id": 1,
         "image": "./images/apu.png",
+        "name": "apu",
         "click-property": false
     },
     {
         "id": 2,
         "image": "./images/aunt.png",
+        "name": "aunt",
         "click-property": false
     },
     {
         "id": 3,
         "image": "./images/bart.png",
+        "name": "bart",
         "click-property": false
     },
     {
         "id": 4,
         "image": "./images/burns.png",
+        "name": "burns",
         "click-property": false
     },
     {
         "id": 5,
         "image": "./images/flanders.png",
+        "name": "flanders",
         "click-property": false
     },
     {
         "id": 6,
         "image": "./images/homer.png",
+        "name": "homer",
         "click-property": false
     },
     {
         "id": 7,
         "image": "./images/krusty.png",
+        "name": "krusty",
         "click-property": false
     },
     {
         "id": 8,
         "image": "./images/lisa.png",
+        "name": "lisa",
         "click-property": false
     },
     {
         "id": 9,
         "image": "./images/maggie.png",
+        "name": "maggie",
         "click-property": false
     },
     {
         "id": 10,
         "image": "./images/marge.png",
+        "name": "marge",
         "click-property": false
     },
     {
         "id": 11,
         "image": "./images/milhouse.png",
+        "name": "milhouse",
         "click-property": false
     },
     {
         "id": 12,
         "image": "./images/moe.png",
+        "name": "moe",
         "click-property": false
     }
 ]
