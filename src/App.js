@@ -31,8 +31,8 @@ class App extends Component {
     );
   }
 
-  checkScore = clickedId => {
-    console.log(clickedId);
+  checkScore = event => {
+    let clickedId = event.target.id;
 
     let clicked = this.state.clickedArray;
 
