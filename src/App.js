@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import ImageCard from "./components/ImageCard/index";
 import Wrapper from "./components/Wrapper/index";
 import images from "./data.json";
-import Navbar from "./components/navbar"
+import Navbar from "./components/navbar/index"
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
   state = {
     images,
     clickedArray: [],
@@ -47,7 +46,9 @@ class App extends Component {
     }
 
     if (clicked.includes(clickedId)) {
-      
+      // added this alert because I didn't get the navbar fully functional
+      alert("That's a repeat Character! You're lucky I only included 12. try again!");
+
       this.setState({
         score: 0,
         clickedArray: [],
@@ -65,7 +66,8 @@ class App extends Component {
     }
 
     if (this.state.clickedArray.length === 10) {
-      // alert("Congratulations on clicking each picture only once! Can you do it again?");
+      // added this alert because I didn't get the navbar fully functional
+      alert("You know your Simpsons! But can you do it 662 times for each Simpsons episode?");
       this.setState({
         clickedArray: [],
         score: 0,
@@ -78,7 +80,11 @@ class App extends Component {
     return (
       <div>
         <Navbar>
-
+          [
+          message={this.state.message}
+          score={this.state.score}
+          topScore={this.state.topScore}
+          ]
         </Navbar>
         <Wrapper>
           {this.state.images.map(pic => (

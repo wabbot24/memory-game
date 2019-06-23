@@ -1,0 +1,25 @@
+.container {
+    height: 100px;
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    margin: auto;
+}
+
+.title, .message, .score {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.title {
+
+}
+
+.message {
+
+}
+
+.score {
+
+}
