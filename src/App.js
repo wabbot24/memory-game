@@ -32,20 +32,20 @@ class App extends Component {
   }
 
   checkScore = clickedId => {
-    console.log("in checkScore");
+    console.log(clickedId);
 
     let clicked = this.state.clickedArray;
 
     if (this.state.score > this.state.topScore) {
       this.setState({
-        topScore: this.state.currentScore
+        topScore: this.state.score
       })
     }
 
     if (clicked.includes(clickedId)) {
       alert("Try again!");
       this.setState({
-        currentScore: 0,
+        sscore: 0,
         clickedArray: []
       })
     }
@@ -73,7 +73,8 @@ class App extends Component {
         <Wrapper>
           {this.state.images.map(pic => (
             <ImageCard
-              shuffle={this.shuffle}
+              shuffleImages={this.shuffleImages}
+              checkScore={this.checkScore}
               id={pic.id}
               key={pic.id}
               name={pic.name}
