@@ -23,7 +23,6 @@ class App extends Component {
   }
 
   shuffleImages = event => {
-    console.log('in shuffleImages');
     let id = parseInt(event.target.id);
     let shuffledImages = this.shuffle(this.state.images);
     this.setState({ shuffledImages });
@@ -34,12 +33,9 @@ class App extends Component {
 
     let clicked = this.state.clickedArray;
 
-    if (this.state.score > this.state.topScore) {
-      this.setState({
-        topScore: this.state.score
-      })
-    }
-    if (clicked[0] === "") {
+    let firstClick = false;
+    if (clicked[0] === undefined) {
+      firstClick = true;
       this.setState({
         message: "That's one! Keep good track!"
       })
@@ -52,22 +48,32 @@ class App extends Component {
       this.setState({
         score: 0,
         clickedArray: [],
-        message: "That's a repeat Character! You're lucky I only included 12. try again!"
+        message: "Do better this time."
       })
     }
     else {
       this.state.clickedArray.push(clickedId);
-      console.log(this.state.clickedArray);
+      // console.log(this.state.clickedArray);
+      if (this.state.score + 1 > this.state.topScore) {
+        this.setState({
+          topScore: this.state.score + 1
+        })
+      }
+      if (!firstClick) {
+        this.setState({
+          message: `Keep going! Only ${11 - this.state.score} to go!`
+        })
+      }
       this.setState({
         clicked: this.state.clickedArray,
-        score: this.state.score + 1,
-        messsage: `Keep going! Only ${11-this.state.score} to go!`
+        score: this.state.score + 1
       });
+
     }
 
-    if (this.state.clickedArray.length === 10) {
+    if (this.state.clickedArray.length === 12) {
       // added this alert because I didn't get the navbar fully functional
-      alert("You know your Simpsons! But can you do it 662 times for each Simpsons episode?");
+      // alert("You know your Simpsons! But can you do it 662 times for each Simpsons episode?");
       this.setState({
         clickedArray: [],
         score: 0,
@@ -79,13 +85,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar>
-          [
-          message={this.state.message}
-          score={this.state.score}
-          topScore={this.state.topScore}
-          ]
-        </Navbar>
+        <Navbar
+        message = {this.state.message}
+        score ={this.state.score}
+        topScore={this.state.topScore}
+        />
+
         <Wrapper>
           {this.state.images.map(pic => (
             <ImageCard

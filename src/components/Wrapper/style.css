@@ -3,7 +3,6 @@
     grid-template-columns: repeat(3, 1fr);
     padding: 10px;
     overflow: auto;
-    grid-auto-flow: dense;
     justify-items: center;
     max-width: 1120px;
     margin: auto;
