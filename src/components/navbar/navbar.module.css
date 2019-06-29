@@ -1,0 +1,64 @@
+.container {
+    /* height: 100px; */
+    background-color: rgb(86, 192, 228);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    align-content: center;
+    margin: auto;
+}
+
+.title, .message, .score {
+    margin: 20px;
+    font-size: 1rem;
+    color: white;
+}
+
+.title {
+    text-align: left;
+    font-variant-caps: petite-caps;
+}
+
+.message {
+    text-align: center;
+    font-style: italic;
+    display: none;
+}
+
+.score {
+    text-align: right;
+    font-variant-caps: petite-caps;
+    display: grid;
+    grid-area: q i;
+    align-content: center;
+}
+#currentScore {
+
+}
+#topScore {
+
+}
+
+@media screen and (min-width: 480px) {
+}
+@media screen and (min-width: 640px) {
+    .title, .message, .score {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 800px) {
+    .message {
+        display: block;
+    }
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .title, .message, .score {
+        font-size: 1.8rem;
+    }
+}
+@media screen and (min-width: 1100px) {
+    .title, .message, .score {
+        font-size: 2rem;
+    }
+}

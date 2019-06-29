@@ -3,6 +3,7 @@ import ImageCard from "./components/ImageCard/index";
 import Wrapper from "./components/Wrapper/index";
 import images from "./data.json";
 import Navbar from "./components/navbar/index"
+import Footer from "./components/Footer/footer"
 
 class App extends Component {
   state = {
@@ -84,7 +85,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <Navbar
         message = {this.state.message}
         score ={this.state.score}
@@ -103,6 +104,7 @@ class App extends Component {
             />
           ))}
         </Wrapper>
+        <Footer message = {this.state.message} />   
       </div>
     );
   }

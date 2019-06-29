@@ -1,12 +1,15 @@
 import React from "react";
-import "./navbar.css"
+import styles from "./navbar.module.css"
 
 function Navbar(props) {
     return (
-        <nav className="container">
-            <span className="title">Simpson's Memory Game</span>
-            <span className="message">{props.message}</span>
-            <span className="score" id="currentScore">Your Score: {props.score} | Top Score: {props.topScore}</span>
+        <nav className={styles.container}>
+            <span className={styles.title}>Simpson's Memory Game</span>
+            <span className={styles.message}>{props.message}</span>
+            <div className={styles.score}>
+                <span id={styles.currentScore}>Your Score: {props.score}</span>
+                <span id={styles.topScore}>Top Score: {props.topScore}</span>
+            </div>
         </nav>
     );
 }
